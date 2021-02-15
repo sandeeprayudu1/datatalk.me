@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Projects
+{% endblock %}
+
+{% block content %}
+  <h1>Projects</h1>
+  <hr style="height:4px;border-width:0;color:#14081f;background-color:#14081f">
+
+  <div class="album py-5">
+    <div class="container">
+
+        <div class="row">
+            {% for project in object_list %}
+                {% if project.image %}
+                
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <a href= "{{project.github_link}}" target="_blank"><img class="card-img-top" src="{{ project.image.url }}" width="100%" height="260px" alt="image job"></a>
+                            <div class="card-body">
+                                <p class="card-text">{{ project.title }}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">{{project.pub_date}}</small>
+                                    <small class = "text-muted">{{project.author.first_name}}{{project.author.last_name}}</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+  </div>
+{% endblock %}

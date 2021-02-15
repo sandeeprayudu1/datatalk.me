@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Our Team
+{% endblock %}
+
+{% block content %}
+<h1> Our Team </h1>
+<hr style="height:4px;border-width:0;color:#14081f;background-color:#14081f">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
+
+<div class="container bootdey">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="section-title mb-4 pb-2">
+                    <p class="text-muted para-desc mx-auto mb-0">Build responsive, mobile-first projects on the web with the world's most popular front-end component library.</p>
+                </div>
+            </div><!--end col-->
+        </div><!--end row-->
+
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6 mt-4 pt-2">
+                <div class="team text-center rounded p-3 py-4">
+                    <img src="{% static 'images/dp.jpg' %}" class="img-fluid shadow rounded-pill" alt="" width="300" height="300">
+                    <div class="content mt-3">
+                        <h4 class="title mb-0">Sandeep Rayudu</h4>
+                        <small class="text-muted">Backend developer</small>
+                        <ul class="list-unstyled mt-3 social-icon social mb-0">
+                            <li class="list-inline-item"><a href="https://www.facebook.com/sandeeprayudu.boya/" target="_blank" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="https://www.instagram.com/boyasandeeprayudu/" target="_blank" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="https://sandeeprayudu.in/" target="_blank"  class="rounded"><i class="mdi mdi-google" title="Google +"></i></a></li>
+                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/boya-sandeeprayudu-294772168/"target="_blank" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
+                        </ul><!--end icon-->
+                    </div>
+                </div>
+            </div><!--end col-->
+            
+            <div class="col-sm-12 col-md-6 col-lg-6 mt-4 pt-2">
+                <div class="team text-center rounded p-3 py-4">
+                    <img src="{% static 'images/gummala.jpg' %}" class="img-fluid shadow rounded-pill" alt="" width="300" height="300">
+                    <div class="content mt-3">
+                        <h4 class="title mb-0">Sandeep gummala</h4>
+                        <small class="text-muted">Designer</small>
+                        <ul class="list-unstyled mt-3 social-icon social mb-0">
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
+                        </ul><!--end icon-->
+                    </div>
+                </div>
+            </div><!--end col-->
+        </div><!--end row-->
+    </div>
+{% endblock %}

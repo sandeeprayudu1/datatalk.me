@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block content %}
+    
+
+<h1 class="text-center">Login</h1>
+<br/><br/>
+<div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto form p-3">
+    <form method="post">
+
+        {% csrf_token %}
+        <div class="mb-3">
+            <input type="text" class="form-control" name = "username" placeholder="Username">
+          </div>
+          <div class="mb-3">
+            <input type="password" class="form-control" name = "password" placeholder="Password">
+          </div>
+        <button class="btn btn-dark">Login</button>
+
+        <br>
+        <br>
+        <div>
+            <style> 
+                #GFG { 
+                    text-decoration: none; 
+                } 
+            </style> 
+            Not Registered?  Signup<a id = GFG href="{% url 'register' %}"> here</a>
+        </div>
+        
+
+    </form>
+</div>
+
+<br>
+<br>
+<br>
+
+
+
+{% endblock %}

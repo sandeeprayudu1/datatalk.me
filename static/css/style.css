@@ -1,0 +1,72 @@
+.navbar {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+i:hover {
+    color: skyblue;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-skip: ink;
+    color: skyblue;
+}
+
+.A li{
+    align-items: center;
+    text-align: center;
+}
+
+.username {
+    text-decoration: none;
+    text-overflow: initial;
+    padding-right: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .username {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .icon {
+        display: none;
+    }
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+}
+  
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+.topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+

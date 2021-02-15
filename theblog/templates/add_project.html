@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Add Project
+{% endblock %}
+
+{% block content %}
+    
+{% if user.is_authenticated %}
+<h1>Add Post</h1>
+<br/><br/>
+<div class="mb-3">
+    <form method="post" enctype="multipart/form-data">
+
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-dark">Add Project</button>
+
+    </form>
+</div>
+
+<script>
+    var name = "{{ user.id }}";
+    document.getElementById('elder').value = name;
+</script>
+{% else %}
+<h2>You're not allowed here baby</h2>
+{% endif %}
+<br>
+<br>
+<br>
+
+
+
+{% endblock %}

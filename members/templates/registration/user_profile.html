@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    User Profile
+{% endblock %}
+
+{% block content %}
+    
+<br>
+<h1>User Profile</h1>
+
+<br> 
+
+
+<div class="row mb-5">
+    <div class="col-md-3">
+        {% if page_user.profile_pic %}
+            <img src="{{ page_user.profile_pic.url }}" class="mx-auto d-block" width = 150 height = 150 style="border-radius: 50%;">
+        {% else %}
+            <img src="{% static 'theblog/images/default_profile.png' %}" class = "card-img img-rounded" width = 150 height = 150>
+        {% endif %}
+    </div>
+    <div class="col-md-9">
+        <div class="card-body">
+            <h5 class="card-title">{{page_user.user.first_name}}{{page_user.user.last_name}}</h5>
+            <p class="card-text">{{page_user.bio }}</p>
+            <p class = "samll text-muted"> 
+                {% if page_user.website_url %}
+                    <a href="{{ page_user.website_url }}"><i class="fa fa-globe fa-1x" style="color: skyblue;padding: 10px;" aria-hidden="true"></i></a>
+                {% endif %}
+                {% if page_user.facebook_url %}
+                    <a href="{{ page_user.facebook_url }}"><i class="fab fa-facebook fa-1x" style="color: skyblue;padding: 10px;" aria-hidden="true"></i></a>
+                {% endif %}
+                {% if page_user.twitter_url %}
+                    <a href="{{ page_user.twitter_url }}"><i class="fab fa-twitter fa-1x" style="color: skyblue;padding: 10px;" aria-hidden="true"></i></a>
+                {% endif %}
+                {% if page_user.instagram_url %}
+                    <a href="{{ page_user.instagram_url}}"><i class="fab fa-instagram fa-1x" style="color: skyblue;padding: 10px;" aria-hidden="true"></i></a>
+                {% endif %}
+                {% if page_user.instagram_url %}
+                    <a href="{{ page_user.pinterest_url }}"><i class="fa fa-pinterest" style="color: skyblue;padding: 10px;" aria-hidden="true"></i></a> 
+                {% endif %}
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

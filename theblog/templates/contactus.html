@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Contact Us
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<h1> Contact Us</h1>
+<hr style="height:4px;border-width:0;color:#14081f;background-color:#14081f">
+
+<section id="contact" class="parallax-section">
+    <div class="container">
+         <div class="row">
+
+              <div class="col-md-12 col-sm-12">
+                   <!-- SECTION TITLE -->
+                   <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
+                        <p>Let's connect we love to help.</p>
+                   </div>
+              </div>
+
+              <div class="col-md-7 col-sm-10">
+                   <!-- CONTACT FORM HERE -->
+                   <div class="mb-3">
+                    <form method="post" enctype="multipart/form-data">
+                
+                        {% csrf_token %}
+                        {{ form.media }}
+                        {{ form.as_p }}
+                        <button class="btn btn-dark">Post</button>
+                        <br>
+                        <br>
+                    </form>
+                </div>
+              </div>
+
+              <div class="col-md-5 col-sm-8">
+                   <!-- CONTACT INFO -->
+                   <div class="wow fadeInUp contact-info" data-wow-delay="0.4s">
+                        <div class="section-title">
+                             <h2>Contact Info</h2>
+                             <p>For any suggestions and querys feel fee to connect.</p>
+                        </div>
+                        
+                        <p><i class="fa fa-map-marker"></i> Manyatha techpark,<br>
+                            Nagawara,Bangalore,
+                            karnataka</p>
+                        <p><i class="fa fa-comment"></i> datatalk.me@gmail.com</p>
+                        <p><i class="fa fa-phone"></i>+91 855505514</p>
+                   </div>
+              </div>
+
+         </div>
+    </div>
+</section>
+{% endblock %}
